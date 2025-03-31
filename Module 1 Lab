@@ -1,0 +1,41 @@
+# Module 1 Lab Assignment (Even/Odd, Converting Number String, Vowel Count)
+
+#------------#
+# Determining if a number is even or odd
+
+def even_or_odd():
+    number = int(input("Enter a number: "))  # Get user input and convert to integer
+    result = "Even" if number % 2 == 0 else "Odd"
+    print(f"The number {number} is {result}.")
+
+# Run the function
+even_or_odd()
+
+#------------#
+
+# Converting a number to a string
+
+def number_to_string():
+    num = input("Enter a number: ")  # Get user input as a string
+    print(f"The string representation is: \"{num}\"")
+
+# Run the function
+number_to_string()
+
+#------------#
+
+# Counting the number of vowels in a string, there is also a second phrase in case someone counts y as a vowel
+
+def vowel_count():
+    sentence = input("Enter a word or phrase: ")  # Get user input
+    vowels = "aeiouAEIOU"  # Standard vowels
+    vowels_with_y = "aeiouyAEIOUY"  # Vowels including 'y'
+
+    count_vowels = sum(1 for char in sentence if char in vowels)  # Count standard vowels
+    count_vowels_with_y = sum(1 for char in sentence if char in vowels_with_y)  # Count vowels + 'y'
+
+    print(f"The number of vowels in \"{sentence}\" is: {count_vowels}")
+    print(f"Unless you count 'y' as a vowel, then the number of vowels in \"{sentence}\" is: {count_vowels_with_y}")
+
+# Run the function
+vowel_count()
